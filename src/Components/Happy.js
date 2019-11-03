@@ -15,9 +15,9 @@ function Happy(props) {
   } else {
     return (
       <div class="icons">
-        <Icon fitted name="frown" size="massive" color="red" />
+        <Icon fitted name="frown" size="massive" color="blue" />
         <br />
-        <h1>sucks</h1>
+        <h1>Hmmmm...let's see what we can do to bring that down a bit</h1>
       </div>
     );
   }

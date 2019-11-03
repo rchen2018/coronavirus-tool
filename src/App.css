@@ -22,13 +22,22 @@
 }
 
 .intro {
-  background-color: #282c34;
+  background-color: rgb(70, 190, 190);
   color: white;
-  padding: 120px;
+  padding: 240px;
+  text-align: left;
+}
+
+.introduction {
+  text-align: left;
+}
+
+h1 {
+  font-size: 48px;
 }
 
 .title {
-  padding: 30px;
+  padding-top: 60px;
 }
 
 .billform {
@@ -55,13 +64,23 @@
 }
 
 .tips {
-  background-color: #282c34;
+  background-color: rgb(70, 190, 190);
   color: white;
   padding: 120px;
 }
 
 .facts {
   padding: 120px;
+}
+
+ul {
+  display: inline-block;
+  text-align: left;
+}
+
+li {
+  padding: 8px;
+  font-size: 20px;
 }
 
 .logo {
