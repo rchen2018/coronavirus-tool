@@ -22,18 +22,16 @@
 }
 
 .intro {
-    background-color: #282c34;
-    color: white;
-    padding: 120px;
+  background-color: #282c34;
+  color: white;
+  padding: 120px;
 }
 
 .title {
-
   padding: 30px;
 }
 
 .billform {
-
   padding: 60px;
 }
 
@@ -42,19 +40,17 @@
 }
 
 .graph {
-
-  background-color: white ;
+  background-color: white;
   padding: 30px;
   color: blue;
 }
 
-.graph h2{
-  font-family: Courier; 
+.graph h2 {
+  font-family: Courier;
   color: black;
-} 
+}
 
 .icons {
-
   padding: 60px;
 }
 
@@ -65,12 +61,10 @@
 }
 
 .facts {
-
   padding: 120px;
 }
 
 .logo {
-
   padding: 30px;
 }
 
