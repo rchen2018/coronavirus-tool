@@ -3,15 +3,19 @@ import _ from "lodash";
 import React from "react";
 import { Dropdown } from "semantic-ui-react";
 
-const addressDefinitions = faker.definitions.address;
-const stateOptions = _.map(addressDefinitions.state, (state, index) => ({
-  key: addressDefinitions.state_abbr[index],
-  text: state,
-  value: addressDefinitions.state_abbr[index]
-}));
+function Bill() {
+  const addressDefinitions = faker.definitions.address;
+  const stateOptions = _.map(addressDefinitions.state, (state, index) => ({
+    key: addressDefinitions.state_abbr[index],
+    text: state,
+    value: addressDefinitions.state_abbr[index]
+  }));
 
-const DropdownExampleSearchSelectionTwo = () => (
-  <Dropdown placeholder="State" search selection options={stateOptions} />
-);
+  return (
+    <div>
+      <Dropdown placeholder={"State"} search selection options={stateOptions} />
+    </div>
+  );
+}
 
-export default DropdownExampleSearchSelectionTwo;
+export default Bill;
