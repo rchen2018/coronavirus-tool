@@ -13,7 +13,12 @@ function Bill() {
 
   return (
     <div>
-      <Dropdown placeholder={"State"} search selection options={stateOptions} />
+      <Dropdown
+        placeholder={"Select a State"}
+        search
+        selection
+        options={stateOptions}
+      />
     </div>
   );
 }

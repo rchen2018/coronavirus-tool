@@ -15,17 +15,22 @@ function Bill() {
         <Form>
           <Form.Field>
             <label id="label" style={{ marginBottom: 24 }}>
-              Type in your monthly utility bill below:{" "}
+              Enter your monthly utility bill:{" "}
             </label>
-            <input
-              placeholder="$0"
-              value={bill}
-              onChange={e => {
-                if (e.target.value.match(/^\d*\.?\d*$/)) {
-                  setBill(e.target.value);
-                }
-              }}
-            />
+            <div class="ui labeled input">
+              <label for="amount" class="ui label">
+                $
+              </label>
+              <input
+                placeholder="0"
+                value={bill}
+                onChange={e => {
+                  if (e.target.value.match(/^\d*\.?\d*$/)) {
+                    setBill(e.target.value);
+                  }
+                }}
+              />
+            </div>
           </Form.Field>
         </Form>
       </div>
