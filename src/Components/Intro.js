@@ -10,6 +10,7 @@ class Intro extends Component {
         <div class="Wrapper">
           <div class="introduction">
             <Image src={logo} alt="team logo" size="large" floated="right" />
+            <br />
             <h1 id="hi">Hi There,</h1>
             <h1 class="title"> Let's take a look at your utilities </h1>
           </div>
