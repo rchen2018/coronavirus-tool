@@ -18,13 +18,16 @@ class List extends React.Component {
 
   render() {
     return (
-      <ul>
-        {this.state.states.map((state) => (
-          <li>
-            {state.state}: {state.positive}
-          </li>
-        ))}
-      </ul>
+      <div id="list_container">
+        <h1>State list</h1>
+        <ul id="covid_list">
+          {this.state.states.map((state) => (
+            <li>
+              {state.state}: {state.positive}
+            </li>
+          ))}
+        </ul>
+      </div>
     );
   }
 }

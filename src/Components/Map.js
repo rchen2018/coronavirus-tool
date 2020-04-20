@@ -39,58 +39,62 @@ class Map extends React.Component {
 
   render() {
     return (
-      <ComposableMap projection="geoAlbersUsa">
-        <Geographies geography={geoUrl}>
-          {({ geographies }) => (
-            <>
-              {geographies.map((geo) => (
-                <Geography
-                  key={geo.rsmKey}
-                  stroke="#FFF"
-                  geography={geo}
-                  fill="#DDD"
-                />
-              ))}
-              {geographies.map((geo) => {
-                const centroid = geoCentroid(geo);
-                const cur = allStates.find((s) => s.val === geo.id);
-                for (const state of this.state.states) {
-                  if (state.state === cur.id) {
-                    return (
-                      <g key={geo.rsmKey + "-name"}>
-                        {cur &&
-                          centroid[0] > -160 &&
-                          centroid[0] < -67 &&
-                          (Object.keys(offsets).indexOf(cur.id) === -1 ? (
-                            <Marker coordinates={centroid}>
-                              <text y="2" fontSize={11} textAnchor="middle">
-                                {state.positive}
-                              </text>
-                            </Marker>
-                          ) : (
-                            <Annotation
-                              subject={centroid}
-                              dx={offsets[cur.id][0]}
-                              dy={offsets[cur.id][1]}
-                            >
-                              <text
-                                x={4}
-                                fontSize={12}
-                                alignmentBaseline="middle"
+      <div>
+        <h1>US Positive Cases by State</h1>
+        <text>updated daily from The COVID Tracking Project</text>
+        <ComposableMap projection="geoAlbersUsa" id="map">
+          <Geographies geography={geoUrl}>
+            {({ geographies }) => (
+              <>
+                {geographies.map((geo) => (
+                  <Geography
+                    key={geo.rsmKey}
+                    stroke="#FFF"
+                    geography={geo}
+                    fill="#DDD"
+                  />
+                ))}
+                {geographies.map((geo) => {
+                  const centroid = geoCentroid(geo);
+                  const cur = allStates.find((s) => s.val === geo.id);
+                  for (const state of this.state.states) {
+                    if (state.state === cur.id) {
+                      return (
+                        <g key={geo.rsmKey + "-name"}>
+                          {cur &&
+                            centroid[0] > -160 &&
+                            centroid[0] < -67 &&
+                            (Object.keys(offsets).indexOf(cur.id) === -1 ? (
+                              <Marker coordinates={centroid}>
+                                <text y="2" fontSize={10} textAnchor="middle">
+                                  {state.positive}
+                                </text>
+                              </Marker>
+                            ) : (
+                              <Annotation
+                                subject={centroid}
+                                dx={offsets[cur.id][0]}
+                                dy={offsets[cur.id][1]}
                               >
-                                {state.positive}
-                              </text>
-                            </Annotation>
-                          ))}
-                      </g>
-                    );
+                                <text
+                                  x={4}
+                                  fontSize={10}
+                                  alignmentBaseline="middle"
+                                >
+                                  {state.positive}
+                                </text>
+                              </Annotation>
+                            ))}
+                        </g>
+                      );
+                    }
                   }
-                }
-              })}
-            </>
-          )}
-        </Geographies>
-      </ComposableMap>
+                })}
+              </>
+            )}
+          </Geographies>
+        </ComposableMap>
+      </div>
     );
   }
 }

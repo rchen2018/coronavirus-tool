@@ -29,6 +29,24 @@
   width: 100%;
 }
 
+#map {
+  width: 95%;
+  margin-top: -75px;
+}
+
+#list_container {
+  padding-bottom: 50px;
+}
+
+#covid_list {
+  -moz-column-count: 4;
+  -moz-column-gap: 50px;
+  -webkit-column-count: 4;
+  -webkit-column-gap: 50px;
+  column-count: 4;
+  column-gap: 50px;
+}
+
 h1 {
   font-size: 48px;
 }
