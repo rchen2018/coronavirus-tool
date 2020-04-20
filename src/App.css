@@ -21,18 +21,12 @@
   color: #09d3ac;
 }
 
-.intro {
-  background-color: rgb(70, 190, 190);
-  color: white;
-  padding: 240px;
-  text-align: left;
-  margin-bottom: 30px;
+#introduction {
+  display: inline-block;
 }
 
-.introduction {
-  text-align: left;
-  margin-top: -160px;
-  margin-bottom: -40px;
+#covid {
+  width: 100%;
 }
 
 h1 {

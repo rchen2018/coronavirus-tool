@@ -8,7 +8,7 @@ function Bill() {
   const stateOptions = _.map(addressDefinitions.state, (state, index) => ({
     key: addressDefinitions.state_abbr[index],
     text: state,
-    value: addressDefinitions.state_abbr[index]
+    value: addressDefinitions.state_abbr[index],
   }));
 
   return (

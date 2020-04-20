@@ -3,7 +3,6 @@ import { Header } from "semantic-ui-react";
 import { List } from "semantic-ui-react";
 import { Image } from "semantic-ui-react";
 import Logo from "../badges.png";
-import logo from "../greenLogo.png";
 
 class Ending extends Component {
   render() {
@@ -44,10 +43,6 @@ class Ending extends Component {
           <h2>The Green Path plants a tree for every badge that you earn :)</h2>
           <br />
           <h2> Earn 5 badges to qualify for a rebate!</h2>
-        </div>
-
-        <div class="logo">
-          <Image src={logo} alt="team logo" size="medium" centered />
         </div>
       </div>
     );
