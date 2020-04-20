@@ -21,6 +21,10 @@
   color: #09d3ac;
 }
 
+h1 {
+  font-size: 48px;
+}
+
 #introduction {
   display: inline-block;
 }
@@ -47,45 +51,19 @@
   column-gap: 50px;
 }
 
-h1 {
-  font-size: 48px;
-}
-
-.title {
-  padding-top: 60px;
-}
-
-.billform {
-  padding: 60px;
-}
-
-#label {
-  font-size: 30px;
-}
-
-.graph {
-  background-color: white;
-  padding: 30px;
-  color: blue;
-}
-
-.graph h2 {
-  font-family: Courier;
-  color: black;
-}
-
-.icons {
-  padding: 60px;
-}
-
-.tips {
-  background-color: rgb(70, 190, 190);
+#tips {
+  background-color: #016a33;
   color: white;
-  padding: 120px;
+  padding: 70px;
 }
 
-.facts {
-  padding: 120px;
+#CDC_link {
+  font-size: 24px;
+  color: #002aff;
+}
+
+#created_by {
+  padding: 18px;
 }
 
 ul {
