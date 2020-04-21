@@ -1,6 +1,4 @@
 import React, { Component } from "react";
-import { Image } from "semantic-ui-react";
-import Logo from "../badges.png";
 
 class Ending extends Component {
   render() {
